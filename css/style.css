@@ -1,0 +1,39 @@
+.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.timer_display {
+  text-align: center;
+}
+
+.timer_inp {
+  margin-left: 4px;
+  max-width: 50px;
+}
+
+.timer_btn {
+  margin-left: 4px;
+}
+
+.timer_err {
+  color: red;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.timer_err-text {
+  color: crimson;
+}
+
+.timer_stop-text {
+  color: darkblue;
+}
+
+.timer_value-text {
+  color: green;
+  font-size: 48px;
+  font-weight: bold;
+}

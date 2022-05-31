@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <li><a href="#" onclick="window.SwitchModule('timer_block', true)">Таймер</a></li>
+  <li><a href="#" onclick="window.SwitchModule('date_block', true)">Калькулятор дат</a></li>
+
+  <!--Таймер-->
+  <div id="timer_block">
+    <!--Управление таймером-->
+    <div class="timer">
+      <label for="timerStartValue">Значение таймера, в минутах:</label>
+      <input id="timerStartValue" class="timer_inp" type="number" value="5">
+      <button id="timerStartBtn" class="timer_btn" onclick="">Start</button>
+      <button id="timerStopBtn" class="timer_btn">Stop</button>
+    </div>
+    <!--Дисплей таймера-->
+    <div id="timerDisplay" class="timer_display"></div>
+  </div>
+  <!--Калькулятор дат-->
+  <div id="date_block" align="center">
+    <br><small>Узнайте, сколько дней прошло от любого события.</small>
+    <FORM NAME="Q">
+      <table width="90%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center">
+            <small>Начальная дата:</small>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="text" size="2" maxlength="2" name="wk1" value="Сб">
+            <input type="text" size="2" maxlength="2" name="day1" value="1">
+            <select name="month1" size="1">
+              <option selected value="1">января</option>
+              <option value="2">февраля</option>
+              <option value="3">марта</option>
+              <option value="4">апреля</option>
+              <option value="5">мая</option>
+              <option value="6">июня</option>
+              <option value="7">июля</option>
+              <option value="8">августа</option>
+              <option value="9">сентября</option>
+              <option value="10">октября</option>
+              <option value="11">ноября</option>
+              <option value="12">декабря</option>
+            </select>
+            <input type="text" size="4" maxlength="4" name="year1" value="2000">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <small>Конечная дата:</small>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="text" size="2" maxlength="2" name="wk2">
+            <input type="text" size="2" maxlength="2" name="day2">
+            <select name="month2" size="1">
+              <option selected value="1">января</option>
+              <option value="2">февраля</option>
+              <option value="3">марта</option>
+              <option value="4">апреля</option>
+              <option value="5">мая</option>
+              <option value="6">июня</option>
+              <option value="7">июля</option>
+              <option value="8">августа</option>
+              <option value="9">сентября</option>
+              <option value="10">октября</option>
+              <option value="11">ноября</option>
+              <option value="12">декабря</option>
+            </select>
+            <input type="text" size="4" maxlength="4" name="year2">
+        <tr>
+          <td align="center">
+            <small>Количество дней между ними:</small>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="text" size="12" maxlength="12" name="kol">
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="button" value="Вычислить" onclick="window.ValidateModule()">
+            <input type="button" value="Очистить" onclick="window.ClearFormModule()">
+          </td>
+        </tr>
+      </table>
+    </FORM>
+  </div>
+
+  <!--Загружаем библиотеку howler.js для проигрывания аудио файлов-->
+  <script src="/js/howler.min.js"></script>
+  <!--Загружаем модули собственной разработки-->
+  <script type="module" src="/js/main.js"></script>
+  <!--Оповещаем пользователя, если его браузер устарел-->
+  <script nomodule>alert("Ваш браузер устарел и не поддерживается сайтом. Обновите браузер!"); </script>
+</body>
+
+</html>
